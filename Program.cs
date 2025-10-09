@@ -32,7 +32,7 @@ namespace sustainibility_water_monitoring_backend
                 options.AddPolicy("AllowSpecificOrigin",
                     policyBuilder =>
                     {
-                        policyBuilder.WithOrigins( "http://localhost:5173", "http://172.20.10.2:8081", "http://192.168.0.119:8081", "http://10.1.5.2:8081", "http://10.127.212.240:8081")
+                        policyBuilder.WithOrigins( "http://localhost:5173", "http://172.20.10.2:8081", "http://192.168.0.119:8081", "http://10.1.5.2:8081", "http://10.127.212.240:8081", "http://10.186.188.240:8081", "http://192.168.1.199:8081")
                                      .AllowAnyHeader()
                                      .AllowAnyMethod();
                     });

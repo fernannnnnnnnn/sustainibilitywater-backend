@@ -10,7 +10,7 @@ namespace sustainibility_water_monitoring_backend.Controllers
     [ApiController]
     public class SensorController : ControllerBase
     {
-        private readonly string connectionString = "Server=localhost;Database=DB_Sustainabilit;user id=sa;password=polman;";
+        private readonly string connectionString = "Server=localhost;Database=DB_Sustainability;user id=sa;password=Z1danfernanda.;";
         private readonly SensorDataService _sensorDataService;
 
         public SensorController(SensorDataService sensorDataService)

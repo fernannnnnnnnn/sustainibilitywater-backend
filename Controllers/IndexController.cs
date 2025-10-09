@@ -10,7 +10,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
     [Route("api/[controller]/[action]")]
     public class Dashboard(IConfiguration configuration) : Controller
     {
-        readonly PolmanAstraLibrary.PolmanAstraLibrary lib = new(configuration.GetConnectionString("DefaultConnection"));
+        //readonly PolmanAstraLibrary.PolmanAstraLibrary lib = new(configuration.GetConnectionString("DefaultConnection"));
+        readonly PolmanAstraLibrary.PolmanAstraLibrary lib = new(PolmanAstraLibrary.PolmanAstraLibrary.Decrypt(configuration.GetConnectionString("DefaultConnection"), "PoliteknikAstraSustainAir_ConfigurationKey"));
         DataTable dt = new();
 
         [HttpPost]
