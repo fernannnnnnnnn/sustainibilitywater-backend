@@ -22,7 +22,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_getDataLokasi", EncodeData.HtmlEncodeObject(value));
-
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -35,7 +36,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("sp_GetKomponenByLokasi", EncodeData.HtmlEncodeObject(value));
-
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -48,6 +50,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_getDataLokasiById", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -60,6 +64,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_createLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -72,6 +78,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_checkLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -84,6 +92,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_detailLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -96,6 +106,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_editLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -108,6 +120,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_setStatusLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -119,6 +133,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_getListLokasi", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
@@ -130,6 +146,8 @@ namespace sustainibility_water_monitoring_backend.Controllers
             {
                 JObject value = JObject.Parse(data.ToString());
                 dt = lib.CallProcedure("stn_getListLokasi2", EncodeData.HtmlEncodeObject(value));
+                Console.WriteLine(JsonConvert.SerializeObject(value));  // Untuk melihat data yang diterima
+                Console.WriteLine(JsonConvert.SerializeObject(dt));
                 return Ok(JsonConvert.SerializeObject(dt));
             }
             catch { return BadRequest(); }
