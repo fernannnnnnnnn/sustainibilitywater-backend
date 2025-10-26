@@ -91,8 +91,8 @@ namespace sustainibility_water_monitoring_backend.Service
                 //var url = "http://172.20.10.5:5255/api/SensorAir/AddDataAir";
                 //var url = "http://10.1.5.2:5255/api/SensorAir/AddDataAir";
                 //var url = "http://10.127.212.240:5255/api/SensorAir/AddDataAir";
-                //var url = "http://192.168.1.199:5255/api/SensorAir/AddDataAir";
-                var url = "http://10.186.188.240:5255/api/SensorAir/AddDataAir";
+                var url = "http://192.168.1.16:5255/api/SensorAir/AddDataAir";
+                //var url = "http://10.186.188.240:5255/api/SensorAir/AddDataAir";
 
 
                 var jsonPayload = JsonSerializer.Serialize(data);
@@ -119,8 +119,8 @@ namespace sustainibility_water_monitoring_backend.Service
                 .WithClientId("AspNetCoreClient")
                 //.WithTcpServer("10.1.5.2", 1884)
                 //.WithTcpServer("10.127.212.240", 1884)
-                //.WithTcpServer("192.168.1.199", 1884)
-                .WithTcpServer("10.186.188.240", 1884)
+                .WithTcpServer("192.168.1.16", 1884)
+                //.WithTcpServer("10.186.188.240", 1884)
                 .Build();
 
             await _mqttClient.ConnectAsync(options, CancellationToken.None);
